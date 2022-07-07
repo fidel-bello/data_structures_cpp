@@ -1,2 +1,7 @@
 # Project exclude paths
 /data-structures-cpp/cmake-build-debug/
+
+# Idea
+.idea
+
+/data-structures-cpp/CMakeLists.txt
