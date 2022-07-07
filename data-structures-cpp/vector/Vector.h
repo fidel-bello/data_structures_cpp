@@ -5,7 +5,7 @@
 #ifndef DATA_STRUCTURES_CPP_VECTOR_H
 #define DATA_STRUCTURES_CPP_VECTOR_H
 #include <iostream>
-
+#include <cassert>
 class Vector {
 private:
     int *arr { nullptr };
@@ -18,6 +18,8 @@ public:
     void set(int idx, int val);
     void print();
     void push(int val);
+    void pop_back();
+    int pop(int idx);
 };
 
 #endif //DATA_STRUCTURES_CPP_VECTOR_H

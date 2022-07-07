@@ -1,4 +1,5 @@
-#include "vector/vector_methods.cpp"
+#include "vector/methods/vector_methods.cpp"
+
 int main()
 {
     v_methods();

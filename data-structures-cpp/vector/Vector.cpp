@@ -25,7 +25,8 @@ Vector::~Vector() {
 }
 
 void Vector::set(int idx, int val) {
-    if (0 <= idx && idx < size) arr[idx] = val;
+    assert(0 <= idx && idx < size);
+    arr[idx] = val;
 }
 
 void Vector::push(int val) {
@@ -37,5 +38,18 @@ void Vector::print() {
     for(int i = 0; i < size; ++i)
         std::cout<< arr[i] << " ";
     std::cout << "\n";
+}
+
+int Vector::pop(int idx) {
+    assert(0 <= idx && idx < size);
+    int val = arr[idx];
+    for(int p = idx + 1; p < size; ++p)
+        arr[p -1] = arr[p];
+    --size;
+    return val;
+}
+
+void Vector::pop_back() {
+     arr[size --];
 }
 
