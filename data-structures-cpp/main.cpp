@@ -1,9 +1,6 @@
-#include <iostream>
-
+#include "vector/vector_methods.cpp"
 int main()
 {
-    std::cout << "hello world\n";
+    v_methods();
     return 0;
 }
-
-//gitignore
