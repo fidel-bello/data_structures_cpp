@@ -20,6 +20,7 @@ public:
     void push(int val);
     void pop_back();
     int pop(int idx);
+    int search(int idx);
 };
 
 #endif //DATA_STRUCTURES_CPP_VECTOR_H

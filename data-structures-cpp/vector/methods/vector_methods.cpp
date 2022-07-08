@@ -10,5 +10,6 @@ void v_methods() {
     v.pop(0);
     v.pop_back();
     v.print();
+    std::cout << v.search(2) << "\n";
     std::cout <<"\n\n<===========Linked List===========> \n\n";
 };

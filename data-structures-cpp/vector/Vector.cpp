@@ -53,3 +53,10 @@ void Vector::pop_back() {
      arr[size --];
 }
 
+int Vector::search(int num) {
+    for(int i = 0; i < size; i++)
+        if(arr[i] == num)
+            return i;
+    return -1;
+}
+
