@@ -7,12 +7,6 @@
 
 int main()
 {
-    /*
-    v_methods(); //the capacity should be expanded to 4 and the result will be 1 2
-    list_methods(); //the result should be 3 4 5
-    stack_methods(); // the result = 5 3 1  && 5
-    list_based_stack(); // result = 2 1 && 2
-     */
     std::cout << "\n<===========Binary Trees===========>\n";
     //creating nodes
     Node* plus = new Node('+');
@@ -22,5 +16,7 @@ int main()
     plus->left = node2;
     plus->right = node3;
     post_order(plus);
+    std::cout << "\n";
+    post_order2(plus);
     return 0;
 }
