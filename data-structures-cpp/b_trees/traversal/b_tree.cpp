@@ -26,10 +26,37 @@ void post_order(Node* root) {
 void post_order2(Node* root){
     if(!root)
         return;
+    std::cout << root->left->left->data<< " ";
+    std::cout << root->left->right->data<< " ";
     std::cout << root->left->data<< " ";
     std::cout << root->right->data<< " ";
     std::cout << root->data << "\n";
 }
 
+void in_order(Node* root){
+    if(!root)
+        return;
+    in_order(root->left);
+    std::cout << root->data << " ";
+    in_order(root->right);
+}
+
+void in_order2(Node* root){
+    if(!root)
+        return;
+    std::cout << root->left->left->data << " ";
+    std::cout << root->left->data<< " ";
+    std::cout << root->left->right->data<< " ";
+    std::cout << root->data << " ";
+    std::cout << root->right->data << " ";
+}
+
+void pre_order(Node* root){
+    if(!root)
+        return;
+    std::cout<<root->data<<" ";
+    pre_order(root->left);
+    pre_order(root->right);
+}
 
 #pragma clang diagnostic pop
