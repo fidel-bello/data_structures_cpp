@@ -7,9 +7,11 @@ void v_methods() {
         v.set(i, i);
     v.push(2);
     v.push(3);
+    v.push(6);
     v.pop(0);
     v.pop_back();
     v.print();
-    std::cout << v.search(2) << "\n";
+    std::cout << v.linear_search(3) << "\n";
+    std::cout << v.binary_search(3) << "\n";
     std::cout <<"\n\n<===========Linked List===========> \n\n";
 };

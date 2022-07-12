@@ -31,6 +31,7 @@ int main()
     std::cout << "\n";
     pre_order(multiply);
 */
-    inorder_add();
+    //inorder_add();
+    v_methods();
     return 0;
 }

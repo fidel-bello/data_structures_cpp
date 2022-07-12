@@ -1,3 +1,5 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "readability-misleading-indentation"
 //
 // Created by me on 7/6/2022.
 //
@@ -53,10 +55,28 @@ void Vector::pop_back() {
      arr[size --];
 }
 
-int Vector::search(int num) {
-    for(int i = 0; i < size; i++)
-        if(arr[i] == num)
+
+int Vector::linear_search(int target) {
+    for(int i = 0; i < size; ++i)
+        if(arr[i] == target)
             return i;
+        return -1;
+}
+
+int Vector::binary_search(int target) {
+    int left = 0;
+    int right = size - 1;
+    while (left <= right){
+        int middle = (left + right) / 2;
+        if(target == arr[middle])
+            return middle;
+        else if(target > arr[middle])
+            left = middle + 1;
+        else if(target < arr[middle])
+            right = middle - 1;
+    }
     return -1;
 }
 
+
+#pragma clang diagnostic pop
