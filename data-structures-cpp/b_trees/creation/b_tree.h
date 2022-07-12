@@ -21,6 +21,11 @@ public:
     void printIn_order();
     void add(const std::vector<int>& val, const std::vector<char>& direction);
     int tree_max();
+    int tree_height();
+    int total_nodes();
+    int leafs_count();
+    bool does_exist(int val);
+
 };
 
 

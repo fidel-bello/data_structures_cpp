@@ -1,4 +1,5 @@
 #pragma clang diagnostic push
+#pragma ide diagnostic ignored "ConstantFunctionResult"
 #pragma ide diagnostic ignored "ConstantConditionsOC"
 #pragma ide diagnostic ignored "UnreachableCode"
 #pragma ide diagnostic ignored "misc-no-recursion"
@@ -50,6 +51,41 @@ int b_tree::tree_max() {
     return res;
 }
 
+int b_tree::tree_height(){
+    int res = 0;
+    if(left)
+        res = 1 + left->tree_height();
+    if(right)
+        res = std::max(res, 1 + right->tree_height());
+    return res;
+}
+
+int b_tree::total_nodes(){
+    int res = 1;
+    if(left)
+        res += left->total_nodes();
+    if(right)
+        res += right->total_nodes();
+    return res;
+}
+
+int b_tree::leafs_count() {
+    int res = !left && !right;
+    if(left)
+        res+= left->leafs_count();
+    if(right)
+        res+= right->leafs_count();
+    return res;
+}
+
+bool b_tree::does_exist(int val) {
+    bool res = val == data;
+    if(!res && left)
+        res = left->does_exist(val);
+    if(!res && right)
+        res = right->does_exist(val);
+    return res;
+}
 
 #pragma clang diagnostic pop
 #pragma clang diagnostic pop
