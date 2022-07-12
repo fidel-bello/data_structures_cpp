@@ -8,5 +8,6 @@ void inorder_add(){
     tree.add({ 3 }, { 'R'});
     tree.add({ 3, 6}, { 'R', 'L'});
     tree.add({ 3, 7}, { 'R', 'R'});
+    std::cout << tree.tree_max() << "\n";
     tree.printIn_order();
 }

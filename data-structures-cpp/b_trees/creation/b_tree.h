@@ -7,21 +7,20 @@
 #include <iostream>
 #include <cassert>
 #include <vector>
+#include <queue>
+#include <stack>
+#include <cmath>
 
 class b_tree {
 private:
-    struct Node {
         int data { };
-        Node* left { };
-        Node* right{ };
-        explicit Node(int data);
-    };
-    Node* root{ };
-    void printIn_order(Node* head);
+        b_tree* left { };
+        b_tree* right{ };
 public:
     explicit b_tree(int val);
     void printIn_order();
-    void add(std::vector<int> val, std::vector<char> direction);
+    void add(const std::vector<int>& val, const std::vector<char>& direction);
+    int tree_max();
 };
 
 
